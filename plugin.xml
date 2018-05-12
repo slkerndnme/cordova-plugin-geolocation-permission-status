@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-geolocation-permission-status"
+        version="1.0.0">
+
+    <name>Cordova Plugin Geolocation Permission Status</name>
+    <description>Simple plugin that retrieve the location permission status. (Android and iOS)</description>
+    <license>MIT</license>
+    <keywords>cordova,location,geolocation,permission,status</keywords>
+
+    <js-module src="www/locationPermission.js" name="locationPermission">
+        <clobbers target="locationPermission"/>
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=3.6.0"></engine>
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LocationPermissionStatus">
+                <param name="android-package"
+                       value="com.slkerndnme.cordova.locationpermissionstatus.LocationPermissionStatus"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/LocationPermissionStatus.java"
+                     target-dir="src/com/slkerndnme/cordova/locationpermissionstatus"/>
+
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="LocationPermissionStatus">
+                <param name="ios-package" value="CDVLocationPermissionStatus"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CDVLocationPermissionStatus.h" target-dir="CDVLocationPermissionStatus"/>
+        <source-file src="src/ios/CDVLocationPermissionStatus.m" target-dir="CDVLocationPermissionStatus"/>
+
+        <framework src="CoreLocation.framework"/>
+
+    </platform>
+
+</plugin>

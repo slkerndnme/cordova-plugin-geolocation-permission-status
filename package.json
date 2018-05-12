@@ -1,0 +1,38 @@
+{
+  "name": "cordova-plugin-geolocation-permission-status",
+  "version": "1.0.0",
+  "description": "Simple plugin that retrieve the location permission status. (Android and iOS)",
+  "cordova": {
+    "id": "cordova-plugin-geolocation-permission-status",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slkerndnme/cordova-plugin-geolocation-permission-status.git"
+  },
+  "keywords": [
+    "cordova",
+    "location",
+    "geolocation",
+    "permission",
+    "status",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.6.0"
+    }
+  ],
+  "author": "slkerndnme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slkerndnme/cordova-plugin-geolocation-permission-status/issues"
+  },
+  "homepage": "https://github.com/slkerndnme/cordova-plugin-geolocation-permission-status#readme"
+}
